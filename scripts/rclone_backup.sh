@@ -41,7 +41,7 @@
 
         #sync local backups to gdrive (older gdrive copies will be deleted)
 		echo -e "\e[36;1m    Syncing to Google Drive ... \e[0m"
-        rclone sync -P ./LMDSBackups --include "/LMDSbackup*"  gdrive:/LMDSBackups/ > ./LMDSBackups/rclone_sync_log
+        rclone -P sync ./LMDSBackups --include "/LMDSbackup*"  gdrive:/LMDSBackups/ > ./LMDSBackups/rclone_sync_log
         echo -e "\e[36;1m    Sync with Google Drive \e[32;1mdone\e[0m"
         echo -e "\e[32m=====================================================================================\e[0m"
 	else
